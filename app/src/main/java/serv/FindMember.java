@@ -18,13 +18,12 @@ public class FindMember extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html; charset=UTF-8");
+		response.getWriter().append("{\"name\":\"hong\",\"hobbys\":[\"독서\",\"달리기\"]}");
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html; charset=UTF-8");
-		response.getWriter().append("{\"name\":\"hong\",\"hobbys\":[\"독서\",\"달리기\"]}");
 		doGet(request, response);
 	}
 
