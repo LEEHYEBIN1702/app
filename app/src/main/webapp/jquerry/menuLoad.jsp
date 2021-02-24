@@ -18,7 +18,7 @@ $(function(){
 	    $(".menu").on("click", function(){
 		$.ajax({
 			url : $(this).data("url")+ ".jsp",
-			success : function(obj){ $("#result").append(obj); }
+			success : function(obj){ $("#result").html(obj); }
 		})
 	});
 });
